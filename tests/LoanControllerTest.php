@@ -21,32 +21,11 @@ class LoanControllerTest extends TestCase
         $this->headers = [];
     }
 
-//    public function testSuccessfullyGetAllLoans()
-//    {
-//        $response = $this->json('GET', 'api/loans', [], $this->headers)->seeJson([
-//            'data' => [
-//                'current_page',
-//                'data' => [
-//                    'id',
-//                    'user_id',
-//                    'amount',
-//                    'status',
-//                    'created_at',
-//                    'updated_at',
-//                ],
-//                'first_page_url',
-//                'from',
-//                'next_page_url',
-//                'path',
-//                'per_page',
-//                'prev_page_url',
-//                'to',
-//            ],
-//            'message',
-//        ]);
-//
-//        $response->assertResponseOk();
-//    }
+    public function testSuccessfullyGetAllLoans()
+    {
+        $response = $this->json('GET', 'api/loans', [], $this->headers);
+        $response->assertResponseOk();
+    }
 
     public function testSuccessfullyLoanCreate()
     {
